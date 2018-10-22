@@ -8,12 +8,14 @@ public class Menu {
 		int option1 = 0;
 		int option2 = 0;
 		int option3 = 0;
+		boolean productExist = true;
 		String initialUser;
 		String initialPassword;
 		String initialPassword2;
 		String initialAdminPassword;
 		String initialEmail;
 		String initialEmail2;
+		String initialSearch;
 		
 		User user1 = new User(); //User
 		Admin admin1 = new Admin();
@@ -169,6 +171,26 @@ public class Menu {
 							}
 							break;
 						case 5: //Search a Product
+							productExist = false;
+							System.out.println("");
+							System.out.println("Introduce the name of the product to search: "); //Scan product name
+							Scanner p = new Scanner(System.in);
+							initialSearch = p.nextLine();
+							for (int i = 0; i < productList.size(); i++) {
+								if(((productList.get(i)).getProductName()).equals(initialSearch)) {
+									System.out.println("");
+									System.out.println("Category: " + (productList.get(i)).getCategoryName());
+									System.out.println("Product: " + (productList.get(i)).getProductName());
+									System.out.println("Price: " + (productList.get(i)).getPrice());
+									System.out.println("Stock: " + (productList.get(i)).getStock());
+									productExist = true;
+									break;
+								}
+							}
+							if (!productExist) {
+								System.out.println("");
+								System.out.println("This product do not exist in our database");
+							}
 							break;
 						case 6: //Exit
 							System.out.println("");
@@ -188,15 +210,15 @@ public class Menu {
 					System.out.println("Please enter your password: "); //Scan password
 					Scanner p2 = new Scanner(System.in);
 					initialAdminPassword = p2.nextLine();					
-					if(initialAdminPassword == admin1.getAdminPassword()) {
+					if(initialAdminPassword.equals(admin1.getAdminPassword())) {
 						System.out.println("");
-						System.out.println("<1>");
+						System.out.println("In progress...");
 					}
 					else {
 						System.out.println("");
 						System.out.println("Incorrect password");
 					}
-				}while (!initialAdminPassword.equals(admin1.getAdminPassword()));			
+				}while (!initialAdminPassword.equals(admin1.getAdminPassword()));
 			}
 			else {
 				System.out.println("");
