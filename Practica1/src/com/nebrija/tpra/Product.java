@@ -2,11 +2,10 @@ package com.nebrija.tpra;
 
 public class Product extends Category { 
 	private String productName;
-	private float price;
+	private double price;
 	private int stock;
-	private String brand;
 	
-	Product(String categoryName, String productName, float price, int stock) {
+	Product(String categoryName, String productName, double price, int stock) {
 		super(categoryName);
 		this.categoryName = categoryName;
 		this.productName = productName;
@@ -15,7 +14,7 @@ public class Product extends Category {
 	}
 
 	//productName Getter and Setter
-	
+
 	public String getProductName() {
 		return productName;
 	}
@@ -25,10 +24,10 @@ public class Product extends Category {
 	
 	//price Getter and Setter
 	
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(float price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	
@@ -39,14 +38,5 @@ public class Product extends Category {
 	}
 	public void setStock(int stock) {
 		this.stock = stock;
-	}
-	
-	//Brand Getter and Setter
-	
-	public String getBrand() {
-		return brand;
-	}
-	public void setBrand(String brand) {
-		this.brand = brand;
 	}
 }

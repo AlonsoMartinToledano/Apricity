@@ -27,9 +27,9 @@ public class Menu {
 		categoryList.add(cat3);
 		
 		List <Product> productList = new ArrayList<Product>();	
-		Product pr1 = new Product("Clothing", "Shirt");
-		Product pr2 = new Product("Video", "Camera");
-		Product pr3 = new Product("Videogames", "Mario Kart");
+		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);
+		Product pr2 = new Product("Video", "Camera", 350, 50);
+		Product pr3 = new Product("Videogames", "Mario Kart", 34.95, 25);
 		productList.add(pr1);
 		productList.add(pr2);
 		productList.add(pr3);
