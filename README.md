@@ -12,6 +12,17 @@ It consists of several classes:
     - Show all prducts
     - Search a product
     - Exit
+    ```
+    			System.out.println("What do you want to do?");
+					System.out.println("<1> Account Information");
+					System.out.println("<2> Change Account Information");
+					System.out.println("<3> Show All Categories");
+					System.out.println("<4> Show All Products");
+					System.out.println("<5> Search a Product");
+					System.out.println("<6> Exit");
+    ```
+    
+    
 - User and Admin: Every methods to access by the user and administrator.
   User has an email, user name and password. However, andmin only has a password to inter into the system.
   Each classes has the default constructor. It is not necessary an specific one beacause the system can not create a new user yet.
