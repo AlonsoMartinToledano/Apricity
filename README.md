@@ -3,7 +3,15 @@
 This work shows the Java code that could be implemented in a web page destined to the sale of products to the user.
 
 It consists of several classes:
-- Menu: Main menu with different options to choose into the program.
+- Menu: It is the main class of the program. It has the menu to choose between the differents options.
+  There are different options as:
+  Choose between a normal user or an admin. Both options check if the passwords are correct. Inside the normal user the options are:
+    - Show account information
+    - Change account information
+    - Show all categories
+    - Show all prducts
+    - Search a product
+    - Exit
 - User and Admin: Every methods to access by the user and administrator.
   User has an email, user name and password. However, andmin only has a password to inter into the system.
   Each classes has the default constructor. It is not necessary an specific one beacause the system can not create a new user yet.
