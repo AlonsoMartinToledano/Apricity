@@ -7,13 +7,13 @@ It consists of several classes:
   It is the main class of the program. It has the menu to choose between the differents options.
   There are different options as:
   Choose between a normal user or an admin. Both options check if the passwords are correct. Inside the normal user the options are:
-    - Show account information
-    - Change account information
-    - Show all categories
-    - Show all prducts
-    - Search a product
-    - Exit
-    
+  - Show account information
+  - Change account information
+  - Show all categories
+  - Show all prducts
+  - Search a product
+  - Exit
+  
     ```
     				System.out.println("What do you want to do?");
 				System.out.println("<1> Account Information");
