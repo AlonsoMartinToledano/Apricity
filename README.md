@@ -3,7 +3,7 @@
 This work shows the Java code that could be implemented in a web page destined to the sale of products to the user.
 
 It consists of several classes:
-### - Menu:
+#### - Menu:
   It is the main class of the program. It has the menu to choose between the differents options.
   There are different options as:
   Choose between a normal user or an admin. Both options check if the passwords are correct. Inside the normal user the options are:
