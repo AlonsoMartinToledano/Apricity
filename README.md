@@ -1,4 +1,4 @@
-# Advanced Programming Projects
+# Apricity
 
 This work shows the Java code that could be implemented in a web page destined to the sale of products to the user.
 
