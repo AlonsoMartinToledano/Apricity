@@ -9,7 +9,6 @@ public class Category {
 	}
 
 	//categoryName Getter and Setter
-	
 	public String getCategoryName() {
 		return categoryName;
 	}
