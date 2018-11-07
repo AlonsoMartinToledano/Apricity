@@ -1,15 +1,46 @@
 package com.nebrija.tpra;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
+		
+		//Variables
+		String userName;
+		String userName2;
+		String userPassword;
+		String userPassword2;
+		String userEmail;
+		String product;
 		int option = 0;
 		boolean equals = false;
+		boolean productExist = true;
 		
+		//Create a User and Admin
 		User user = new User();
 		Admin admin = new Admin();
 		
+		//List of Categories
+		List <Category> categoryList = new ArrayList<Category>();
+		Category cat1 = new Category("Clothing");
+		Category cat2 = new Category("Video");
+		Category cat3 = new Category("Videogames");
+		categoryList.add(cat1);
+		categoryList.add(cat2);
+		categoryList.add(cat3);
+		
+		//List of Products
+		List <Product> productList = new ArrayList<Product>();	
+		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);
+		Product pr2 = new Product("Video", "Camera", 350, 50);
+		Product pr3 = new Product("Videogames", "Mario Kart", 34.95, 25);
+		productList.add(pr1);
+		productList.add(pr2);
+		productList.add(pr3);
+		
+		//Main Program		
 		System.out.println("Welcome to Apricity.\nOne of the best online shopping sites arround the world.\n");
 		do {
 			System.out.println("<1> Normal User");
@@ -23,13 +54,11 @@ public class Main {
 				
 				//LogIn
 				do {
-					String userName;
-					String userPassword;
-					System.out.println("\nPlease enter your User Name:");
+					System.out.print("\nPlease enter your User Name:");
 					Scanner n = new Scanner(System.in);
 					userName = n.nextLine();
 					
-					System.out.println("Please enter your Password:");
+					System.out.print("Please enter your Password:");
 					Scanner p = new Scanner(System.in);
 					userPassword = p.nextLine();
 					
@@ -46,7 +75,7 @@ public class Main {
 				
 				//Normal User Options
 				do {
-					System.out.println("What do you want to do?");
+					System.out.println("\nWhat do you want to do?");
 					System.out.println("<1> Account Information");
 					System.out.println("<2> Change Account Information");
 					System.out.println("<3> Show All Categories");
@@ -85,10 +114,36 @@ public class Main {
 									
 								//Change Password
 								case 2:
+									do {
+										System.out.print("\nEnter your New Password: ");
+										
+										Scanner p = new Scanner(System.in);
+										userPassword = p.nextLine();
+										
+										System.out.print("\nIntroduce again your New Password: ");
+										Scanner p1 = new Scanner(System.in);
+										userPassword2 = p1.nextLine();
+										
+										if(userPassword.equals(userPassword2)) { //Check if passwords match
+											user.setUserPassword(userPassword);
+											System.out.println("\nPassword changed successfully!");
+										}
+										else {
+											System.out.println("\nPasswords do not match. Please, introuce it again");
+										}
+									}while(!userPassword.equals(userPassword2));
 									break;
 									
 								//Change Email
 								case 3:
+									System.out.print("\nEnter your New Email: ");
+									
+									Scanner e = new Scanner(System.in);
+									userEmail = e.nextLine();
+									
+									user.setUserEmail(userEmail);
+									
+									System.out.println("\nEmail changed successfully!");
 									break;
 									
 								//Back
@@ -102,14 +157,41 @@ public class Main {
 							
 						//Show All Categories
 						case 3:
+							System.out.println("\nList of categories:");
+							for (int i = 0; i < categoryList.size(); i++) {
+								System.out.println(i + 1 + ".- " + (categoryList.get(i)).getCategoryName());
+							}
 							break;
 							
 						//Show All Products
 						case 4:
+							System.out.println("\nList of all products:");
+							for (int i = 0; i < productList.size(); i++) {
+								System.out.println(i + 1 + ".- " + (productList.get(i)).getProductName());
+							}
 							break;
 							
 						//Search a Product
 						case 5:
+							productExist = false;
+							System.out.println("\nIntroduce the name of the product to search: ");
+							
+							Scanner p = new Scanner(System.in);
+							product = p.nextLine();
+							
+							for (int i = 0; i < productList.size(); i++) {
+								if(((productList.get(i)).getProductName()).equals(product)) {
+									System.out.println("\nCategory: " + (productList.get(i)).getCategoryName());
+									System.out.println("Product: " + (productList.get(i)).getProductName());
+									System.out.println("Price: " + (productList.get(i)).getProductPrice() + " $");
+									System.out.println("Stock: " + (productList.get(i)).getProductStock() + " units");
+									productExist = true;
+									break;
+								}
+							}
+							if (!productExist) {
+								System.out.println("\nThe product does not exist in our database");
+							}
 							break;
 							
 						//Exit
@@ -126,11 +208,25 @@ public class Main {
 			
 			//Admin
 			else if (option == 2) {
-				System.out.println("In progress...");
+				do {
+					System.out.println("\nPlease enter your password: "); //Scan password
+					
+					Scanner p = new Scanner(System.in);
+					userPassword = p.nextLine();					
+					if(userPassword.equals(admin1.getAdminPassword())) {
+						System.out.println("");
+						System.out.println("In progress...");
+					}
+					else {
+						System.out.println("");
+						System.out.println("Incorrect password");
+					}
+				}while (!initialAdminPassword.equals(admin1.getAdminPassword()));
 			}
 			
 			//Exit
 			else if (option == 3) {
+				System.out.println("Good bye");
 				break;
 			}
 		}while(option != 1 && option != 2 && option != 3);
