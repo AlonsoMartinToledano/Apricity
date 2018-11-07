@@ -1,5 +1,6 @@
 package com.nebrija.tpra;
 
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,11 +10,11 @@ public class Main {
 		
 		//Variables
 		String userName;
-		String userName2;
 		String userPassword;
 		String userPassword2;
 		String userEmail;
 		String product;
+		String category;
 		int option = 0;
 		boolean equals = false;
 		boolean productExist = true;
@@ -54,11 +55,11 @@ public class Main {
 				
 				//LogIn
 				do {
-					System.out.print("\nPlease enter your User Name:");
+					System.out.print("\nPlease enter your User Name: ");
 					Scanner n = new Scanner(System.in);
 					userName = n.nextLine();
 					
-					System.out.print("Please enter your Password:");
+					System.out.print("Please enter your Password: ");
 					Scanner p = new Scanner(System.in);
 					userPassword = p.nextLine();
 					
@@ -87,6 +88,7 @@ public class Main {
 					option = o1.nextInt();
 					
 					switch (option) {
+					
 						//Account Information
 						case 1:
 							System.out.println("\nUser Name: " + user.getUserName());
@@ -159,7 +161,7 @@ public class Main {
 						case 3:
 							System.out.println("\nList of categories:");
 							for (int i = 0; i < categoryList.size(); i++) {
-								System.out.println(i + 1 + ".- " + (categoryList.get(i)).getCategoryName());
+								System.out.println(i + 1 + ". " + (categoryList.get(i)).getCategoryName());
 							}
 							break;
 							
@@ -167,7 +169,7 @@ public class Main {
 						case 4:
 							System.out.println("\nList of all products:");
 							for (int i = 0; i < productList.size(); i++) {
-								System.out.println(i + 1 + ".- " + (productList.get(i)).getProductName());
+								System.out.println(i + 1 + ". " + (productList.get(i)).getProductName());
 							}
 							break;
 							
@@ -196,7 +198,7 @@ public class Main {
 							
 						//Exit
 						case 6:
-							System.out.println("Good bye");
+							System.out.println("\nGood bye");
 							break;
 						default:
 							System.out.println("\nPlease, choose a valid option\n");
@@ -209,24 +211,127 @@ public class Main {
 			//Admin
 			else if (option == 2) {
 				do {
-					System.out.println("\nPlease enter your password: "); //Scan password
+					System.out.print("\nPlease enter your password: ");
 					
 					Scanner p = new Scanner(System.in);
-					userPassword = p.nextLine();					
-					if(userPassword.equals(admin1.getAdminPassword())) {
-						System.out.println("");
-						System.out.println("In progress...");
+					userPassword = p.nextLine();
+					
+					if(userPassword.equals(admin.getAdminPassword())) {
+						do {
+							System.out.println("\n<1> Chage Password");
+							System.out.println("<2> Change Normal User Name");
+							System.out.println("<3> Generate a Category List File");
+							System.out.println("<4> Generate a Product List File");
+							System.out.println("<5> Exit");
+							
+							Scanner o1 = new Scanner(System.in);
+							option = o1.nextInt();
+							
+							switch (option) {
+							
+								//Change Password
+								case 1:
+									do {
+										System.out.print("\nEnter your New Password: ");
+										
+										Scanner p1 = new Scanner(System.in);
+										userPassword = p1.nextLine();
+										
+										System.out.print("\nIntroduce again your New Password: ");
+										Scanner p2 = new Scanner(System.in);
+										userPassword2 = p2.nextLine();
+										
+										if(userPassword.equals(userPassword2)) { //Check if passwords match
+											admin.setAdminPassword(userPassword);
+											System.out.println("\nPassword changed successfully!");
+										}
+										else {
+											System.out.println("\nPasswords do not match. Please, introuce it again");
+										}
+									}while(!userPassword.equals(userPassword2));
+									break;
+									
+								//Change Normal User Name
+								case 2:
+									System.out.print("\nEnter the New Normal User Name: ");
+									
+									Scanner u = new Scanner(System.in);
+									userName = u.nextLine();
+									
+									user.setUserName(userName);
+									
+									System.out.println("\nNormal User Name changed successfully!");
+									break;
+									
+								//Generate a Category List File
+								case 3:
+									FileOutputStream fos = null;
+									
+									try {
+										fos = new FileOutputStream("./CategoryListFile.txt");
+										for (int i = 0; i < categoryList.size(); i++) {
+											category = i + 1 + ". " + (categoryList.get(i)).getCategoryName();
+											
+											fos.write((category).getBytes());
+											fos.write(System.getProperty("line.separator").getBytes());
+										}
+									} catch (Exception e) {
+										e.printStackTrace();
+									} finally {
+										try {
+											fos.close();
+										}catch (Exception e) {	
+										}
+									}
+									
+									System.out.println("\nCategory List File generated successfully!");
+									break;
+									
+								//Generate a Product List File
+								case 4:
+									FileOutputStream fos2 = null;
+									
+									try {
+										fos2 = new FileOutputStream("./ProductListFile.txt");
+										for (int i = 0; i < productList.size(); i++) {
+											product = i + 1 + ". " + (productList.get(i)).getProductName();
+											
+											fos2.write((product).getBytes());
+											fos2.write(System.getProperty("line.separator").getBytes());
+										}
+									} catch (Exception e) {
+										e.printStackTrace();
+									} finally {
+										try {
+											fos2.close();
+										}catch (Exception e) {	
+										}
+									}
+									
+									System.out.println("\nProduct List File generated successfully!");
+									break;
+									
+								//Exit
+								case 5:
+									System.out.println("\nGood bye");
+									break;
+									
+								default:
+									System.out.println("\nPlease, choose a valid option\n");
+									break;
+							}
+						}while(option != 5);
+						option = 3;
 					}
 					else {
-						System.out.println("");
-						System.out.println("Incorrect password");
+						System.out.println("\nIncorrect password");
 					}
-				}while (!initialAdminPassword.equals(admin1.getAdminPassword()));
+				}while (!userPassword.equals(admin.getAdminPassword()));
 			}
 			
 			//Exit
 			else if (option == 3) {
-				System.out.println("Good bye");
+				System.out.println("\nGood bye");
 				break;
 			}
 		}while(option != 1 && option != 2 && option != 3);
