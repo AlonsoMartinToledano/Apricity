@@ -11,21 +11,21 @@ To begin ask to log in as an admin or a normal user.
 Then, there are different menus depending on the type of user.
 #### Admin Menu
 ```
-					System.out.println("\n<1> Change Password");
-					System.out.println("<2> Change Normal User Name");
-					System.out.println("<3> Generate a Category List File");
-					System.out.println("<4> Generate a Product List File");
-					System.out.println("<5> Exit");
+		System.out.println("\n<1> Change Password");
+		System.out.println("<2> Change Normal User Name");
+		System.out.println("<3> Generate a Category List File");
+		System.out.println("<4> Generate a Product List File");
+		System.out.println("<5> Exit");
 ```
 #### Normal User Menu
 ```
-					System.out.println("\nWhat do you want to do?");
-					System.out.println("<1> Account Information");
-					System.out.println("<2> Change Account Information");
-					System.out.println("<3> Show All Categories");
-					System.out.println("<4> Show All Products");
-					System.out.println("<5> Search a Product");
-					System.out.println("<6> Exit");
+		System.out.println("\nWhat do you want to do?");
+		System.out.println("<1> Account Information");
+		System.out.println("<2> Change Account Information");
+		System.out.println("<3> Show All Categories");
+		System.out.println("<4> Show All Products");
+		System.out.println("<5> Search a Product");
+		System.out.println("<6> Exit");
 ```
 ### Class Admin
 ### Class User
