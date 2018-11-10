@@ -16,7 +16,7 @@ Then, there are different menus depending on the type of user.
 							System.out.println("<3> Generate a Category List File");
 							System.out.println("<4> Generate a Product List File");
 							System.out.println("<5> Exit");
-'''
+							'''
 #### Normal User Menu
 '''
 					System.out.println("\nWhat do you want to do?");
