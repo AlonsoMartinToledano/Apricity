@@ -218,7 +218,7 @@ public class Main {
 					
 					if(userPassword.equals(admin.getAdminPassword())) {
 						do {
-							System.out.println("\n<1> Chage Password");
+							System.out.println("\n<1> Change Password");
 							System.out.println("<2> Change Normal User Name");
 							System.out.println("<3> Generate a Category List File");
 							System.out.println("<4> Generate a Product List File");
