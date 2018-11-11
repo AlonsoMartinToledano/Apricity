@@ -39,7 +39,9 @@ This class extends from Category, so the Category Name is the same. Then, the co
 ## Testing
 Different JUnit Test destinated to test every program Constructor, List, Getter and Setter.
 ```
-//category Constructor Test
+class CategoryTest {
+
+	//category Constructor Test
 		@Test
 		void testCategoryConstructor() {
 			Category cat1 = new Category("Clothing");
@@ -77,3 +79,4 @@ Different JUnit Test destinated to test every program Constructor, List, Getter 
 			assertTrue(categoryList.contains(cat1));
 			assertFalse(categoryList.isEmpty());
 		}
+}
