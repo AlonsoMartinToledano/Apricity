@@ -77,4 +77,3 @@ Different JUnit Test destinated to test every program Constructor, List, Getter 
 			assertTrue(categoryList.contains(cat1));
 			assertFalse(categoryList.isEmpty());
 		}
-    ```
