@@ -37,5 +37,4 @@ Contains a constructor with an Argument: Category Name. Category has a protected
 ### Class Product
 This class extends from Category, so the Category Name is the same. Then, the constructor has as Argument: categoyName, productName, productPrice and ProductStock. With each methods to change and get the different variables.
 ## Testing
-
-## Development
+Different JUnit Test destinated to test every program Constructor, List, Getter and Setter.
