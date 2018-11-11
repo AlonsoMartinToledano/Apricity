@@ -38,3 +38,43 @@ Contains a constructor with an Argument: Category Name. Category has a protected
 This class extends from Category, so the Category Name is the same. Then, the constructor has as Argument: categoyName, productName, productPrice and ProductStock. With each methods to change and get the different variables.
 ## Testing
 Different JUnit Test destinated to test every program Constructor, List, Getter and Setter.
+```
+//category Constructor Test
+		@Test
+		void testCategoryConstructor() {
+			Category cat1 = new Category("Clothing");
+		}
+	
+	//categoryName Getter and Setter Test
+		@Test
+		void testGetCategoryName() {
+			Category cat1 = new Category("Clothing");
+			
+			assertEquals("Clothing", cat1.getCategoryName());
+		}
+		
+		@Test
+		void testSetCategoryName() {
+			Category cat1 = new Category("Clothing");
+			
+			cat1.setCategoryName("newCategoryName");
+			assertEquals("newCategoryName", cat1.getCategoryName());
+		}
+	
+	//categoryList Test
+		@Test
+		void testCategoryList() {
+			List <Category> categoryList = new ArrayList<Category>();
+			Category cat1 = new Category("Clothing");
+			Category cat2 = new Category("Video");
+			Category cat3 = new Category("Videogames");
+			categoryList.add(cat1);
+			categoryList.add(cat2);
+			categoryList.add(cat3);
+			
+			assertEquals(3, categoryList.size());
+			assertEquals("Video", categoryList.get(1).getCategoryName());
+			assertTrue(categoryList.contains(cat1));
+			assertFalse(categoryList.isEmpty());
+		}
+    ```
