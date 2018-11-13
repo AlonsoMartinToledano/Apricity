@@ -1,6 +1,5 @@
 package com.nebrija.tpra;
 
-
 public class Category {
 	protected String categoryName;
 	
