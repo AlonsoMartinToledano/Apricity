@@ -19,9 +19,9 @@ System.out.println("<3> Show All Categories");
 System.out.println("<4> Show All Products");
 System.out.println("<5> Search a Product");
 System.out.println("<6> Exit");
-``` 
-#### Admin Menu
 ```
+#### Admin Menu
+```java
 System.out.println("\n<1> Change Password");
 System.out.println("<2> Change Normal User Name");
 System.out.println("<3> Generate a Category List File");
@@ -38,7 +38,7 @@ Contains a constructor with an Argument: Category Name. Category has a protected
 This class extends from Category, so the Category Name is the same. Then, the constructor has as Argument: categoyName, productName, productPrice and ProductStock. With each methods to change and get the different variables.
 ## Testing
 Different JUnit Test destinated to test every program Constructor, List, Getter and Setter.
-```
+```java
 class CategoryTest {
 
 	//category Constructor Test
