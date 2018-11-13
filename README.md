@@ -11,7 +11,7 @@ To begin ask to log in as an admin or a normal user.
 Then, there are different menus depending on the type of user.
 Also it has an Admin, User ad a list of Categories and Produts to begin to work with.
 #### Normal User Menu
-```
+```java 
 System.out.println("\nWhat do you want to do?");
 System.out.println("<1> Account Information");
 System.out.println("<2> Change Account Information");
@@ -19,7 +19,7 @@ System.out.println("<3> Show All Categories");
 System.out.println("<4> Show All Products");
 System.out.println("<5> Search a Product");
 System.out.println("<6> Exit");
-```
+``` 
 #### Admin Menu
 ```
 System.out.println("\n<1> Change Password");
