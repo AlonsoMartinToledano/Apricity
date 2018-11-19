@@ -1,45 +1,30 @@
 package com.nebrija.tpra;
 
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
 		//Variables
 		String userName;
 		String userPassword;
 		String userPassword2;
 		String userEmail;
-		String product;
-		String category;
 		int option = 0;
 		boolean equals = false;
-		boolean productExist = true;
 		
 		//Create a User and Admin
 		User user = new User();
 		Admin admin = new Admin();
 		
-		//List of Categories
-		List <Category> categoryList = new ArrayList<Category>();
+		//Create Categories
 		Category cat1 = new Category("Clothing");
 		Category cat2 = new Category("Video");
 		Category cat3 = new Category("Videogames");
-		categoryList.add(cat1);
-		categoryList.add(cat2);
-		categoryList.add(cat3);
 		
 		//List of Products
-		List <Product> productList = new ArrayList<Product>();	
 		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);
 		Product pr2 = new Product("Video", "Camera", 350, 50);
 		Product pr3 = new Product("Videogames", "Mario Kart", 34.95, 25);
-		productList.add(pr1);
-		productList.add(pr2);
-		productList.add(pr3);
 		
 		//Main Program		
 		System.out.println("Welcome to Apricity.\nOne of the best online shopping sites arround the world.\n");
@@ -159,41 +144,17 @@ public class Main {
 							
 						//Show All Categories
 						case 3:
-							System.out.println("\nList of categories:");
-							for (int i = 0; i < categoryList.size(); i++) {
-								System.out.println(i + 1 + ". " + (categoryList.get(i)).getCategoryName());
-							}
+							Category.showCategoryName();
 							break;
 							
 						//Show All Products
 						case 4:
-							System.out.println("\nList of all products:");
-							for (int i = 0; i < productList.size(); i++) {
-								System.out.println(i + 1 + ". " + (productList.get(i)).getProductName());
-							}
+							Product.showProductName();
 							break;
 							
 						//Search a Product
 						case 5:
-							productExist = false;
-							System.out.println("\nIntroduce the name of the product to search: ");
-							
-							Scanner p = new Scanner(System.in);
-							product = p.nextLine();
-							
-							for (int i = 0; i < productList.size(); i++) {
-								if(((productList.get(i)).getProductName()).equals(product)) {
-									System.out.println("\nCategory: " + (productList.get(i)).getCategoryName());
-									System.out.println("Product: " + (productList.get(i)).getProductName());
-									System.out.println("Price: " + (productList.get(i)).getProductPrice() + " $");
-									System.out.println("Stock: " + (productList.get(i)).getProductStock() + " units");
-									productExist = true;
-									break;
-								}
-							}
-							if (!productExist) {
-								System.out.println("\nThe product does not exist in our database");
-							}
+							Product.searchAProduct();
 							break;
 							
 						//Exit
@@ -265,50 +226,12 @@ public class Main {
 									
 								//Generate a Category List File
 								case 3:
-									FileOutputStream fos = null;
-									
-									try {
-										fos = new FileOutputStream("./CategoryListFile.txt");
-										for (int i = 0; i < categoryList.size(); i++) {
-											category = i + 1 + ". " + (categoryList.get(i)).getCategoryName();
-											
-											fos.write((category).getBytes());
-											fos.write(System.getProperty("line.separator").getBytes());
-										}
-									} catch (Exception e) {
-										e.printStackTrace();
-									} finally {
-										try {
-											fos.close();
-										}catch (Exception e) {	
-										}
-									}
-									
-									System.out.println("\nCategory List File generated successfully!");
+									Category.writeCategoriesFile();
 									break;
 									
 								//Generate a Product List File
 								case 4:
-									FileOutputStream fos2 = null;
-									
-									try {
-										fos2 = new FileOutputStream("./ProductListFile.txt");
-										for (int i = 0; i < productList.size(); i++) {
-											product = i + 1 + ". " + (productList.get(i)).getProductName();
-											
-											fos2.write((product).getBytes());
-											fos2.write(System.getProperty("line.separator").getBytes());
-										}
-									} catch (Exception e) {
-										e.printStackTrace();
-									} finally {
-										try {
-											fos2.close();
-										}catch (Exception e) {	
-										}
-									}
-									
-									System.out.println("\nProduct List File generated successfully!");
+									Product.writeProductsFile();
 									break;
 									
 								//Exit
