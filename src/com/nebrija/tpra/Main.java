@@ -15,13 +15,8 @@ public class Main {
 		//Create a User and Admin
 		User user = new User();
 		Admin admin = new Admin();
-		
-		//Create Categories
-		Category cat1 = new Category("Clothing");
-		Category cat2 = new Category("Video");
-		Category cat3 = new Category("Videogames");
-		
-		//List of Products
+
+		//Create Products
 		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);
 		Product pr2 = new Product("Video", "Camera", 350, 50);
 		Product pr3 = new Product("Videogames", "Mario Kart", 34.95, 25);

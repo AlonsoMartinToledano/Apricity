@@ -17,8 +17,8 @@ public class Product extends Category {
 		super(categoryName);
 		this.categoryName = categoryName;
 		this.productName = productName;
-		this.setProductPrice(productPrice);
-		this.setProductStock(productStock);
+		this.productPrice = productPrice;
+		this.productStock = productStock;
 		
 		productList.add(this);
 	}
