@@ -1,7 +1,7 @@
 package com.nebrija.tpra;
 
 public class Admin {
-	private String adminPassword = "adminpass";
+	private String adminPassword = "a";
 	
 	//adminPassword Getter and Setter
 	public String getAdminPassword() {

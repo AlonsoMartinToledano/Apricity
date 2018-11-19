@@ -2,8 +2,8 @@ package com.nebrija.tpra;
 
 public class User {
 	private String userEmail = "adrian@gmail.com";
-	private String userName = "Adrian";
-	private String userPassword = "adrianpass";
+	private String userName = "a";
+	private String userPassword = "a";
 	
 	//userEmail Getter and Setter
 	public String getUserEmail() {
