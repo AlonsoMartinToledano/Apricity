@@ -1,8 +1,9 @@
 package com.nebrija.tpra;
 
+import java.util.Observable;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends Observable {
 	public static void main(String[] args) {	
 		//Variables
 		String userName;
@@ -176,9 +177,10 @@ public class Main {
 						do {
 							System.out.println("\n<1> Change Password");
 							System.out.println("<2> Change Normal User Name");
-							System.out.println("<3> Generate a Category List File");
-							System.out.println("<4> Generate a Product List File");
-							System.out.println("<5> Exit");
+							System.out.println("<3> Increase Product Stock");
+							System.out.println("<4> Generate a Category List File");
+							System.out.println("<5> Generate a Product List File");
+							System.out.println("<6> Exit");
 							
 							Scanner o1 = new Scanner(System.in);
 							option = o1.nextInt();
@@ -219,18 +221,23 @@ public class Main {
 									System.out.println("\nNormal User Name changed successfully!");
 									break;
 									
-								//Generate a Category List File
+								//Increase Product Stock
 								case 3:
+									Product.increaseProductStock();
+									break;
+									
+								//Generate a Category List File
+								case 4:
 									Category.writeCategoriesFile();
 									break;
 									
 								//Generate a Product List File
-								case 4:
+								case 5:
 									Product.writeProductsFile();
 									break;
 									
 								//Exit
-								case 5:
+								case 6:
 									System.out.println("\nGood bye");
 									break;
 									
@@ -238,7 +245,7 @@ public class Main {
 									System.out.println("\nPlease, choose a valid option\n");
 									break;
 							}
-						}while(option != 5);
+						}while(option != 6);
 						option = 3;
 					}
 					else {

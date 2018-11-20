@@ -49,7 +49,7 @@ public class Product extends Category {
 		this.productStock = productStock;
 	}
 	
-	//List Size
+	//Product List Size
 		public static int productListSize() {
 			return productList.size();
 		}
@@ -62,28 +62,33 @@ public class Product extends Category {
 		}
 	}
 	
-	//Write Products File
-	public static void writeProductsFile() {
-		String product;
-		FileOutputStream fos2 = null;
+	//Increase Product Stock
+	public static void increaseProductStock() {
+		int units = 0;
 		
-		try {
-			fos2 = new FileOutputStream("./ProductListFile.txt");
-			for (int i = 0; i < productList.size(); i++) {
-				product = i + 1 + ". " + (productList.get(i)).getProductName();
-				
-				fos2.write((product).getBytes());
-				fos2.write(System.getProperty("line.separator").getBytes());
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				fos2.close();
-			}catch (Exception e) {	
+		System.out.println("\nWich product do you want to increase the stock?");
+		boolean productExist = false;
+		String product;
+
+		Scanner p = new Scanner(System.in);
+		product = p.nextLine();
+		
+		System.out.println("\nHow many units do you want to increase the stock?");
+		
+		Scanner u = new Scanner(System.in);
+		units = u.nextInt();
+		
+		for (int i = 0; i < productList.size(); i++) {
+			if(((productList.get(i)).getProductName()).equals(product)) {
+				(productList.get(i)).setProductStock((productList.get(i)).getProductStock() + units);
+				System.out.println("\nStock Increased");
+				productExist = true;
+				break;
 			}
 		}
-		System.out.println("\nProduct List File generated successfully!");
+		if (!productExist) {
+			System.out.println("\nThe product does not exist in the database");
+		}
 	}
 	
 	//Search a Product
@@ -109,5 +114,29 @@ public class Product extends Category {
 		if (!productExist) {
 			System.out.println("\nThe product does not exist in our database");
 		}
+	}
+	
+	//Write Products File
+	public static void writeProductsFile() {
+		String product;
+		FileOutputStream fos2 = null;
+		
+		try {
+			fos2 = new FileOutputStream("./ProductListFile.txt");
+			for (int i = 0; i < productList.size(); i++) {
+				product = i + 1 + ". " + (productList.get(i)).getProductName();
+				
+				fos2.write((product).getBytes());
+				fos2.write(System.getProperty("line.separator").getBytes());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				fos2.close();
+			}catch (Exception e) {	
+			}
+		}
+		System.out.println("\nProduct List File generated successfully!");
 	}
 }

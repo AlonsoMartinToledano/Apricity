@@ -1,9 +1,16 @@
 package com.nebrija.tpra;
 
-public class User {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
+
+public class User implements Observer {
 	private String userEmail = "adrian@gmail.com";
 	private String userName = "a";
 	private String userPassword = "a";
+	
+	private static List <Product> productsBuyed = new ArrayList<Product>();
 	
 	//userEmail Getter and Setter
 	public String getUserEmail() {
@@ -27,5 +34,11 @@ public class User {
 	}
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
+	}
+	
+	@Override
+	public void update(Observable o, Object arg) {
+		// TODO Auto-generated method stub
+		
 	}
 }
