@@ -9,7 +9,7 @@ public abstract class Category {
 	
 	protected String categoryName;
 	
-	//Category Constructor	
+	//Category Constructor
 	Category(String categoryName){
 		this.categoryName = categoryName;
 		
@@ -25,7 +25,7 @@ public abstract class Category {
 		this.categoryName = categoryName;
 	}
 	
-	//List Size
+	//Category List Size
 	public static int categoryListSize() {
 		return categoryList.size();
 	}
