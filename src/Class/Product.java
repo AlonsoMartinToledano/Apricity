@@ -13,7 +13,7 @@ public class Product extends Category {
 	private int productStock;
 	
 	//Product Constructor
-	Product(String categoryName, String productName, double productPrice, int productStock) {
+	public Product(String categoryName, String productName, double productPrice, int productStock) {
 		super(categoryName);
 		this.categoryName = categoryName;
 		this.productName = productName;

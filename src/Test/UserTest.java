@@ -9,56 +9,56 @@ import Class.User;
 class UserTest {
 
 	//user Constructor Test
-	@Test
-		void testUserConstructor() {
-			User u = new User();
-		}
-	
-	//userEmail Getter and Setter Test
 		@Test
-		void testGetUserEmail() {
-			User u = new User();
-			
-			assertEquals("adrian@gmail.com", u.getUserEmail());
-		}
-		
-		@Test
-		void testSetUserEmail() {
-			User u = new User();
-			
-			u.setUserEmail("newEmail@gmail.com");
-			assertEquals("newEmail@gmail.com", u.getUserEmail());
-		}
+			void testUserConstructor() {
+				User user = new User("a", "a", "a");
+			}
 	
 	//userName Getter and Setter Test
 		@Test
 		void testGetUserName() {
-			User u = new User();
+			User user = new User("a", "a", "a");
 			
-			assertEquals("Adrian", u.getUserName());
+			assertEquals("a", user.getUserName());
 		}
 		
 		@Test
 		void testSetUserName() {
-			User u = new User();
+			User user = new User("a", "a", "a");
 			
-			u.setUserName("newUserName");
-			assertEquals("newUserName", u.getUserName());
+			user.setUserName("newUserName");
+			assertEquals("newUserName", user.getUserName());
 		}
 	
 	//userPassword Getter and Setter Test
 		@Test
 		void testGetUserPassword() {
-			User u = new User();
+			User user = new User("a", "a", "a");
 			
-			assertEquals("adrianpass", u.getUserPassword());
+			assertEquals("a", user.getUserPassword());
 		}
 		
 		@Test
 		void testSetUserPassword() {
-			User u = new User();
+			User user = new User("a", "a", "a");
 			
-			u.setUserPassword("newPassword");
-			assertEquals("newPassword", u.getUserPassword());
+			user.setUserPassword("newPassword");
+			assertEquals("newPassword", user.getUserPassword());
+		}
+		
+	//userEmail Getter and Setter Test
+		@Test
+		void testGetUserEmail() {
+			User user = new User("a", "a", "a");
+			
+			assertEquals("a", user.getUserEmail());
+		}
+		
+		@Test
+		void testSetUserEmail() {
+			User user = new User("a", "a", "a");
+			
+			user.setUserEmail("newEmail@gmail.com");
+			assertEquals("newEmail@gmail.com", user.getUserEmail());
 		}
 }

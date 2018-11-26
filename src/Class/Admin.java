@@ -1,7 +1,7 @@
 package Class;
 
 public class Admin {
-	private String adminPassword = "a";
+	private String adminPassword = "adminpassword";
 	
 	//adminPassword Getter and Setter
 	public String getAdminPassword() {

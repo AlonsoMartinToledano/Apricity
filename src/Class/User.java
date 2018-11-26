@@ -11,20 +11,12 @@ public class User {
 	private String userEmail;
 	
 	//User Constructor				
-	User(String userName, String userPassword, String userEmail){
+	public User(String userName, String userPassword, String userEmail){
 		this.userName = userName;
 		this.userPassword = userPassword;
 		this.userEmail = userEmail;
 		
 		userList.add(this);
-	}
-	
-	//userEmail Getter and Setter
-	public String getUserEmail() {
-		return userEmail;
-	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
 	}
 	
 	//userName Getter and Setter
@@ -43,7 +35,15 @@ public class User {
 		this.userPassword = userPassword;
 	}
 	
-	//Top Buyer
+	//userEmail Getter and Setter
+	public String getUserEmail() {
+		return userEmail;
+	}
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+	
+	//Be Top Buyer
 	public void beTopBuyer() {
 		TopBuyers tB = TopBuyers.getTopBuyers();
 		if(tB.getTopBuyer() != null && tB.getTopBuyer() != this) {
