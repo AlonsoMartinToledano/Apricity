@@ -1,4 +1,4 @@
-package com.nebrija.tpra;
+package Class;
 
 import java.util.Scanner;
 
@@ -13,8 +13,9 @@ public class Main {
 		boolean equals = false;
 		
 		//Create a User and Admin
-		User user = new User();
 		Admin admin = new Admin();
+		User user = new User("a", "a", "a");
+		User user2 = new User("b", "b", "b");
 
 		//Create Products
 		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);

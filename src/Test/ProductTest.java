@@ -1,4 +1,4 @@
-package com.nebrija.tpra;
+package Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import Class.Product;
 
 class ProductTest {
 
@@ -61,22 +63,5 @@ class ProductTest {
 			
 			pr1.setProductStock(150);
 			assertEquals(150, pr1.getProductStock());
-		}
-		
-	//categoryList Test
-		@Test
-		void testProductList() {
-			List <Product> productList = new ArrayList<Product>();
-			Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);
-			Product pr2 = new Product("Video", "Camera", 350, 50);
-			Product pr3 = new Product("Videogames", "Mario Kart", 34.95, 25);
-			productList.add(pr1);
-			productList.add(pr2);
-			productList.add(pr3);
-			
-			assertEquals(3, productList.size());
-			assertEquals("Camera", productList.get(1).getProductName());
-			assertTrue(productList.contains(pr1));
-			assertFalse(productList.isEmpty());
 		}
 }

@@ -1,11 +1,13 @@
-package com.nebrija.tpra;
+package Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class AdminTest {
+import Class.Admin;
 
+class AdminTest {
+	
 	//admin Constructor Test
 		@Test
 		void testAdminConstructor() {
@@ -17,7 +19,7 @@ class AdminTest {
 		void testGetAdminPassword() {
 			Admin a = new Admin();
 			
-			assertEquals("adminpass", a.getAdminPassword());
+			assertEquals("adminpassword", a.getAdminPassword());
 		}
 		
 		@Test

@@ -1,11 +1,11 @@
-package com.nebrija.tpra;
+package Class;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.io.FileOutputStream;
 
 public abstract class Category {
-	private static List <Category> categoryList = new ArrayList<Category>();
+	private static List <Category> categoryList = new ArrayList <Category>();
 	
 	protected String categoryName;
 	
