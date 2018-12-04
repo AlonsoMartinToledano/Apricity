@@ -2,6 +2,8 @@ package Class;
 
 import java.util.Scanner;
 
+import Controller.General;
+
 public class Main {
 	public static void main(String[] args) {	
 		//Variables
@@ -21,6 +23,10 @@ public class Main {
 		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);
 		Product pr2 = new Product("Video", "Camera", 350, 50);
 		Product pr3 = new Product("Videogames", "Mario Kart", 34.95, 25);
+		
+		General.Inicio();
+		
+		/*
 		
 		//Main Program		
 		System.out.println("Welcome to Apricity.\nOne of the best online shopping sites arround the world.\n");
@@ -260,5 +266,8 @@ public class Main {
 				break;
 			}
 		}while(option != 1 && option != 2 && option != 3);
+		
+		*/
+		
 	}
 }

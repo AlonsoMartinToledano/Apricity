@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StartController">
    <center>
       <Separator orientation="VERTICAL" prefHeight="253.0" prefWidth="0.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -21,7 +21,7 @@
    <left>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <right>
-            <Button mnemonicParsing="false" text="Admin" BorderPane.alignment="CENTER">
+            <Button fx:id="adminButton" mnemonicParsing="false" onAction="#pushAdminButton" text="Admin" BorderPane.alignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -32,7 +32,7 @@
    <right>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <left>
-            <Button mnemonicParsing="false" text="Normal User" BorderPane.alignment="CENTER">
+            <Button fx:id="normalUserButton" mnemonicParsing="false" onAction="#pushNormalUserButton" text="Normal User" BorderPane.alignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -46,7 +46,7 @@
             <Separator prefHeight="16.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
          </top>
          <center>
-            <Button mnemonicParsing="false" prefHeight="21.0" prefWidth="52.0" text="Exit" textFill="#ae0404" BorderPane.alignment="CENTER">
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#pushExitButton" prefHeight="21.0" prefWidth="52.0" text="Exit" textFill="#ae0404" BorderPane.alignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>

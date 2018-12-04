@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <BorderPane prefHeight="58.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <center>
+            <Label text="Account Information" textFill="#0a23c6" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+   </top>
+   <left>
+      <Separator orientation="VERTICAL" prefHeight="239.0" prefWidth="37.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="100.0" />
+         </BorderPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Separator>
+   </left>
+   <right>
+      <Separator orientation="VERTICAL" prefHeight="239.0" prefWidth="40.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets right="100.0" />
+         </BorderPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Separator>
+   </right>
+   <bottom>
+      <Separator prefHeight="8.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="100.0" />
+         </BorderPane.margin>
+      </Separator>
+   </bottom>
+   <effect>
+      <InnerShadow color="#77bee4" height="30.0" radius="14.5" width="30.0" />
+   </effect>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="44.0" layoutY="14.0" text="User Name:" textFill="#c60404">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="46.0" text="completeusername">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="90.0" text="Password:" textFill="#c60404">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="122.0" text="completepassword">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="44.0" layoutY="162.0" text="Email:" textFill="#c60404">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="193.0" text="completeemail">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
