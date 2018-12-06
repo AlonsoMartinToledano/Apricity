@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
@@ -43,13 +48,6 @@
          </opaqueInsets>
       </Separator>
    </right>
-   <bottom>
-      <Separator prefHeight="8.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="100.0" />
-         </BorderPane.margin>
-      </Separator>
-   </bottom>
    <effect>
       <InnerShadow color="#77bee4" height="30.0" radius="14.5" width="30.0" />
    </effect>
@@ -61,32 +59,42 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="87.0" layoutY="46.0" text="completeusername">
+            <TextArea layoutX="67.0" layoutY="55.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="200.0" />
+            <Label layoutX="44.0" layoutY="105.0" text="Password:" textFill="#c60404">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="44.0" layoutY="90.0" text="Password:" textFill="#c60404">
+            <Label layoutX="44.0" layoutY="192.0" text="Email:" textFill="#c60404">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="87.0" layoutY="122.0" text="completepassword">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="44.0" layoutY="162.0" text="Email:" textFill="#c60404">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="87.0" layoutY="193.0" text="completeemail">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
+            <TextArea layoutX="67.0" layoutY="146.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="200.0" />
+            <TextArea layoutX="67.0" layoutY="231.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="200.0" />
          </children>
       </Pane>
    </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="23.0" minHeight="7.0" prefHeight="14.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Separator prefHeight="13.0" prefWidth="600.0" />
+            <Button mnemonicParsing="false" text="Back" GridPane.rowIndex="1">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="15.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </bottom>
 </BorderPane>

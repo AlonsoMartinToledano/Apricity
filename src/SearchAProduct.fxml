@@ -3,8 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -19,7 +20,7 @@
             <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
          </bottom>
          <center>
-            <Label text="Login Admin" textFill="#0a23c6" BorderPane.alignment="CENTER">
+            <Label text="Search a Product" textFill="#0a23c6" BorderPane.alignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="24.0" />
                </font>
@@ -39,6 +40,12 @@
          <BorderPane.margin>
             <Insets right="100.0" />
          </BorderPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
       </Separator>
    </right>
    <effect>
@@ -69,57 +76,24 @@
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="19.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="350.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="22.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="207.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="229.0" minHeight="10.0" prefHeight="222.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="136.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="136.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="199.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Password" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font size="24.0" />
-               </font>
+            <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" text="Search">
                <GridPane.margin>
-                  <Insets bottom="50.0" left="125.0" />
-               </GridPane.margin>
-            </Label>
-            <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="271.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="40.0" top="35.0" />
-               </GridPane.margin>
-            </PasswordField>
-            <Button mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets bottom="70.0" left="145.0" />
+                  <Insets left="300.0" />
                </GridPane.margin>
             </Button>
-            <Separator orientation="VERTICAL" prefHeight="259.0" prefWidth="4.0" GridPane.rowIndex="1">
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="266.0">
                <GridPane.margin>
                   <Insets left="20.0" />
                </GridPane.margin>
-            </Separator>
-            <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin>
-            </Separator>
-            <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin>
-            </Separator>
-            <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin>
-            </Separator>
-            <Separator prefWidth="200.0" GridPane.columnIndex="1" />
-            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </TextField>
          </children>
       </GridPane>
    </center>

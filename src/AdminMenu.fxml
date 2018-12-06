@@ -50,7 +50,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button mnemonicParsing="false" text="Show Account Information">
+                        <Button mnemonicParsing="false" text="Increase Product Stock">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -58,41 +58,29 @@
                               <Insets />
                            </opaqueInsets>
                            <GridPane.margin>
-                              <Insets left="30.0" />
-                           </GridPane.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" text="Show All Categories" GridPane.rowIndex="1">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <GridPane.margin>
-                              <Insets left="55.0" top="50.0" />
-                           </GridPane.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" text="Show All Products" GridPane.rowIndex="2">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <GridPane.margin>
-                              <Insets bottom="50.0" left="62.0" />
-                           </GridPane.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" text="Search a Product" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                           <GridPane.margin>
-                              <Insets bottom="100.0" left="55.0" />
+                              <Insets left="45.0" />
                            </GridPane.margin>
                         </Button>
                         <SplitMenuButton mnemonicParsing="false" text="Change Account Information" GridPane.columnIndex="1">
                            <items>
                               <MenuItem mnemonicParsing="false" text="Change Password" />
-                              <MenuItem mnemonicParsing="false" text="Change Email" />
+                              <MenuItem mnemonicParsing="false" text="Change Normal UserName" />
                            </items>
                            <font>
                               <Font size="18.0" />
                            </font>
+                        </SplitMenuButton>
+                        <SplitMenuButton mnemonicParsing="false" text="Generate File" GridPane.rowIndex="1">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Category List File" />
+                              <MenuItem mnemonicParsing="false" text="Product List File" />
+                           </items>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="65.0" top="50.0" />
+                           </GridPane.margin>
                         </SplitMenuButton>
                      </children>
                   </GridPane>

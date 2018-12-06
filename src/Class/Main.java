@@ -26,7 +26,7 @@ public class Main {
 		
 		General.Inicio();
 		
-		/*
+		
 		
 		//Main Program		
 		System.out.println("Welcome to Apricity.\nOne of the best online shopping sites arround the world.\n");
@@ -267,7 +267,7 @@ public class Main {
 			}
 		}while(option != 1 && option != 2 && option != 3);
 		
-		*/
+		
 		
 	}
 }
