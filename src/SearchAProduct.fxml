@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SearchAProductController">
    <top>
       <BorderPane prefHeight="58.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <bottom>
@@ -62,7 +62,7 @@
          </rowConstraints>
          <children>
             <Separator prefHeight="13.0" prefWidth="600.0" />
-            <Button mnemonicParsing="false" text="Back" GridPane.rowIndex="1">
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#pushBackButton" text="Back" GridPane.rowIndex="1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -83,13 +83,13 @@
           <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="199.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Search">
+            <TextArea fx:id="productText" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#pushSearchButton" text="Search">
                <GridPane.margin>
                   <Insets left="300.0" />
                </GridPane.margin>
             </Button>
-            <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="266.0">
+            <TextField fx:id="searchText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeSearchText" prefHeight="31.0" prefWidth="266.0">
                <GridPane.margin>
                   <Insets left="20.0" />
                </GridPane.margin>

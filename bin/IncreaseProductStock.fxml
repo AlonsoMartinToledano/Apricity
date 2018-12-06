@@ -48,7 +48,7 @@
       </Separator>
    </right>
    <effect>
-      <InnerShadow color="#77bee4" height="30.0" radius="14.5" width="30.0" />
+      <InnerShadow color="#e87979" height="30.0" radius="14.5" width="30.0" />
    </effect>
    <bottom>
       <GridPane BorderPane.alignment="CENTER">

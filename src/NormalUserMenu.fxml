@@ -5,6 +5,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -35,7 +36,7 @@
       </GridPane>
    </bottom>
    <center>
-      <TitledPane animated="false" prefHeight="364.0" prefWidth="600.0" text="What do you want to do?" textFill="#0a23c6" BorderPane.alignment="CENTER">
+      <TitledPane animated="false" expanded="false" prefHeight="364.0" prefWidth="600.0" text="What do you want to do?" textFill="#0a23c6" BorderPane.alignment="CENTER">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
@@ -104,4 +105,7 @@
          </font>
       </TitledPane>
    </center>
+   <effect>
+      <InnerShadow color="#77bee4" />
+   </effect>
 </BorderPane>

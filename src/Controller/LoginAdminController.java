@@ -18,7 +18,8 @@ public class LoginAdminController {
 
     @FXML
     void pushBackButton(ActionEvent event) {
-
+    	General.loginAdmin.close();
+    	General.start.show();
     }
 
     @FXML

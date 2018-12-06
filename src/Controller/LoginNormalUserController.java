@@ -28,12 +28,8 @@ public class LoginNormalUserController {
 
     @FXML
     void pushLoginButton(ActionEvent event) {
-    	if(userNameText.getText() == "a") {
-    		General.loginNormalUser.close();
-    	}
-    	else {
-    		System.out.print(userNameText.getText());
-    	}
+    	General.loginNormalUser.close();
+    	General.normalUserMenu.show();
     }
 
     @FXML
