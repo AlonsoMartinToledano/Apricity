@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import Class.Admin;
+import Class.User;
 
 class AdminTest {
 	
@@ -28,5 +29,13 @@ class AdminTest {
 			
 			a.setAdminPassword("newPassword");
 			assertEquals("newPassword", a.getAdminPassword());
+		}
+	
+	//LoginAdmin Test
+		@Test
+		void testLoginAdmin() {
+			String pass = "adminpassword";
+			Admin admin = new Admin();
+			assertEquals(true, admin.loginAdmin(pass));
 		}
 }

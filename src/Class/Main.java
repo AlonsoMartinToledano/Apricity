@@ -17,7 +17,6 @@ public class Main {
 		//Create a User and Admin
 		Admin admin = new Admin();
 		User user = new User("a", "a", "a");
-		User user2 = new User("b", "b", "b");
 
 		//Create Products
 		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);
@@ -26,7 +25,7 @@ public class Main {
 		
 		General.Inicio();
 		
-		
+		/*
 		
 		//Main Program		
 		System.out.println("Welcome to Apricity.\nOne of the best online shopping sites arround the world.\n");
@@ -267,7 +266,7 @@ public class Main {
 			}
 		}while(option != 1 && option != 2 && option != 3);
 		
-		
+		*/
 		
 	}
 }

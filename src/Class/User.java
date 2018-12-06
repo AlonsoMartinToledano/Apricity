@@ -55,4 +55,17 @@ public class User {
 	public boolean checkTopBuyer() {
 		return (TopBuyers.getTopBuyers().getTopBuyer() == this);
 	}
+	
+	//Login NormalUser
+	public boolean loginNormalUser(String name, String pass) {
+		boolean login;
+		
+		if(name.equals(userName) && pass.equals(userPassword)) {
+			login = true;
+		}
+		else {
+			login = false;
+		}
+		return login;
+	}
 }

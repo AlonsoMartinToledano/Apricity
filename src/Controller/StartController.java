@@ -17,17 +17,19 @@ public class StartController {
 
     @FXML
     void pushAdminButton(ActionEvent event) {
-
+    	General.start.close();
+    	General.loginAdmin.show();
     }
 
     @FXML
     void pushExitButton(ActionEvent event) {
-
+    	General.start.close();
     }
 
     @FXML
     void pushNormalUserButton(ActionEvent event) {
-
+    	General.start.close();
+    	General.loginNormalUser.show();
     }
 
 }

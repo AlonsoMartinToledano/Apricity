@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.NormalUserMenuController">
    <bottom>
       <GridPane BorderPane.alignment="CENTER">
          <columnConstraints>
@@ -23,7 +23,7 @@
             <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="Back" GridPane.rowIndex="1">
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#pushBackButton" text="Back" GridPane.rowIndex="1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -50,7 +50,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button mnemonicParsing="false" text="Show Account Information">
+                        <Button fx:id="showAccountInformationButton" mnemonicParsing="false" onAction="#pushShowAccountInformationButton" text="Show Account Information">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -61,7 +61,7 @@
                               <Insets left="30.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Show All Categories" GridPane.rowIndex="1">
+                        <Button fx:id="showAllCategoriesButton" mnemonicParsing="false" onAction="#pushShowAllCategoriesButton" text="Show All Categories" GridPane.rowIndex="1">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -69,7 +69,7 @@
                               <Insets left="55.0" top="50.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Show All Products" GridPane.rowIndex="2">
+                        <Button fx:id="showAllProductsButton" mnemonicParsing="false" onAction="#pushShowAllProductsButton" text="Show All Products" GridPane.rowIndex="2">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -77,7 +77,7 @@
                               <Insets bottom="50.0" left="62.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="Search a Product" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Button fx:id="searchAProductButton" mnemonicParsing="false" onAction="#pushSearchAProduct" text="Search a Product" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -87,8 +87,8 @@
                         </Button>
                         <SplitMenuButton mnemonicParsing="false" text="Change Account Information" GridPane.columnIndex="1">
                            <items>
-                              <MenuItem mnemonicParsing="false" text="Change Password" />
-                              <MenuItem mnemonicParsing="false" text="Change Email" />
+                              <MenuItem fx:id="changePasswordButton" mnemonicParsing="false" onAction="#pushChangePasswordButton" text="Change Password" />
+                              <MenuItem fx:id="changeEmail" mnemonicParsing="false" onAction="#pushChangeEmail" text="Change Email" />
                            </items>
                            <font>
                               <Font size="18.0" />

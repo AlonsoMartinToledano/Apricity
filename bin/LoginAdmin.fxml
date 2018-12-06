@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginAdminController">
    <top>
       <BorderPane prefHeight="58.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <bottom>
@@ -55,7 +55,7 @@
          </rowConstraints>
          <children>
             <Separator prefHeight="13.0" prefWidth="600.0" />
-            <Button mnemonicParsing="false" text="Back" GridPane.rowIndex="1">
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#pushBackButton" text="Back" GridPane.rowIndex="1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -88,12 +88,12 @@
                   <Insets bottom="50.0" left="125.0" />
                </GridPane.margin>
             </Label>
-            <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="271.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <PasswordField fx:id="passwordText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writePasswordText" prefHeight="31.0" prefWidth="271.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="40.0" top="35.0" />
                </GridPane.margin>
             </PasswordField>
-            <Button mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#pushLoginButton" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="70.0" left="145.0" />
                </GridPane.margin>

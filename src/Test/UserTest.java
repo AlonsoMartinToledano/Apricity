@@ -61,4 +61,13 @@ class UserTest {
 			user.setUserEmail("newEmail@gmail.com");
 			assertEquals("newEmail@gmail.com", user.getUserEmail());
 		}
+		
+	//LoginNormalUser Test
+		@Test
+		void testLoginNormalUser() {
+			String name = "a";
+			String pass = "a";
+			User user = new User(name, pass, "a");
+			assertEquals(true, user.loginNormalUser(name, pass));
+		}
 }
