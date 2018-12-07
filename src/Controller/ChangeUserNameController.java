@@ -1,14 +1,15 @@
 package Controller;
 
+import Class.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class ChangeUserNameController {
 
     @FXML
-    private PasswordField newUserNameText;
+    private TextField newUserNameText;
 
     @FXML
     private Button changeButton;
@@ -20,16 +21,13 @@ public class ChangeUserNameController {
     void pushBackButton(ActionEvent event) {
     	General.changeUserName.close();
     	General.adminMenu.show();
+    	newUserNameText.clear();
     }
 
     @FXML
     void pushChangeButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void writeNewUserNameText(ActionEvent event) {
-
+    	User.setUserName(newUserNameText.getText());
+    	newUserNameText.clear();
     }
 
 }

@@ -103,6 +103,15 @@ public class Product extends Category {
 		}
 	}
 	
+	//Increase Product Stock Visual
+	public static void increaseProductStockVisual(String product, int units) {
+		for (int i = 0; i < productList.size(); i++) {
+			if(productList.get(i).getProductName().equals(product)) {
+				productList.get(i).setProductStock((productList.get(i)).getProductStock() + units);
+			}
+		}
+	}
+	
 	//Search a Product
 	public static void searchAProduct() {
 		boolean productExist = false;
@@ -126,6 +135,38 @@ public class Product extends Category {
 		if (!productExist) {
 			System.out.println("\nThe product does not exist in our database");
 		}
+	}
+	
+	//Product Exist
+	public static boolean productExist(String product) {
+		boolean exist = false;
+		for (int i = 0; i < productList.size(); i++) {
+			if(((productList.get(i)).getProductName()).equals(product)) {
+				exist = true;
+				break;
+			}
+			else {
+				exist = false;
+			}
+		}
+		return exist;
+	}
+	
+	//Visualize a Product
+	public static String visualizeAProduct(String product) {
+		String text1;
+		String text2 = "";
+		
+		for (int i = 0; i < productList.size(); i++) {
+			if(((productList.get(i)).getProductName()).equals(product)) {
+				text1 = "Category: " + productList.get(i).getCategoryName() +
+						"\nProduct: " + productList.get(i).getProductName() +
+						"\nPrice: " + productList.get(i).getProductPrice() + " $" +
+						"\nStock: " + productList.get(i).getProductStock() + " units";
+				text2 = text2 + text1;
+			}
+		}
+		return text2;
 	}
 	
 	//Write Products File

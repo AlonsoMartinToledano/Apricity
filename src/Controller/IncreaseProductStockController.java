@@ -1,5 +1,6 @@
 package Controller;
 
+import Class.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,21 +24,15 @@ public class IncreaseProductStockController {
     void pushBackButton(ActionEvent event) {
     	General.increaseProductStock.close();
     	General.adminMenu.show();
+    	productText.clear();
+    	unitsText.clear();
     }
 
     @FXML
     void pushIncreaseButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void writeProductText(ActionEvent event) {
-
-    }
-
-    @FXML
-    void writeUnitsText(ActionEvent event) {
-
+    	Product.increaseProductStockVisual(productText.getText(), Integer.parseInt(unitsText.getText()));
+    	productText.clear();
+    	unitsText.clear();
     }
 
 }

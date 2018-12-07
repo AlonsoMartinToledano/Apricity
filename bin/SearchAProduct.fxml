@@ -83,13 +83,16 @@
           <RowConstraints maxHeight="218.0" minHeight="10.0" prefHeight="199.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextArea fx:id="productText" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+            <TextArea fx:id="productText" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
             <Button fx:id="searchButton" mnemonicParsing="false" onAction="#pushSearchButton" text="Search">
                <GridPane.margin>
                   <Insets left="300.0" />
                </GridPane.margin>
             </Button>
-            <TextField fx:id="searchText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writeSearchText" prefHeight="31.0" prefWidth="266.0">
+            <TextField fx:id="searchText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="266.0">
                <GridPane.margin>
                   <Insets left="20.0" />
                </GridPane.margin>

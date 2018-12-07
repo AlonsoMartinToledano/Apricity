@@ -3,8 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -31,12 +31,6 @@
       <BorderPane prefHeight="304.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <center>
             <BorderPane prefHeight="151.0" prefWidth="388.0" BorderPane.alignment="CENTER">
-               <center>
-                  <PasswordField fx:id="newUserNameText" maxWidth="-Infinity" minWidth="-Infinity" onAction="#writeNewUserNameText" prefHeight="33.0" prefWidth="300.0" BorderPane.alignment="TOP_CENTER">
-                     <BorderPane.margin>
-                        <Insets />
-                     </BorderPane.margin></PasswordField>
-               </center>
                <top>
                   <Label text="New UserName" BorderPane.alignment="CENTER">
                      <font>
@@ -54,6 +48,9 @@
                      </BorderPane.margin>
                   </Button>
                </bottom>
+               <center>
+                  <TextField fx:id="newUserNameText" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="282.0" BorderPane.alignment="CENTER" />
+               </center>
             </BorderPane>
          </center>
          <top>

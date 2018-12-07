@@ -1,5 +1,6 @@
 package Controller;
 
+import Class.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,10 +9,13 @@ import javafx.scene.control.PasswordField;
 public class ChangeUserPasswordController {
 
     @FXML
-    private PasswordField newPasswordText;
+    private Button changeButton;
 
     @FXML
-    private Button changeButton;
+    private PasswordField newPasswordText1;
+
+    @FXML
+    private PasswordField newPasswordText2;
 
     @FXML
     private Button backButton;
@@ -20,16 +24,17 @@ public class ChangeUserPasswordController {
     void pushBackButton(ActionEvent event) {
     	General.changeUserPassword.close();
     	General.normalUserMenu.show();
+    	newPasswordText1.clear();
+    	newPasswordText2.clear();
     }
 
     @FXML
     void pushNewPasswordButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void writeNewPasswordText(ActionEvent event) {
-
+    	if (newPasswordText1.getText().equals(newPasswordText2.getText())) {
+    		User.setUserPassword(newPasswordText1.getText());
+    		newPasswordText1.clear();
+        	newPasswordText2.clear();
+    	}
     }
 
 }

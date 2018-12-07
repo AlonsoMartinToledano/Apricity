@@ -23,7 +23,7 @@ public class User {
 	public static String getUserName() {
 		return userName;
 	}
-	public void setUserName(String userName) {
+	public static void setUserName(String userName) {
 		User.userName = userName;
 	}
 	
@@ -31,7 +31,7 @@ public class User {
 	public static String getUserPassword() {
 		return userPassword;
 	}
-	public void setUserPassword(String userPassword) {
+	public static void setUserPassword(String userPassword) {
 		User.userPassword = userPassword;
 	}
 	
@@ -39,7 +39,7 @@ public class User {
 	public static String getUserEmail() {
 		return userEmail;
 	}
-	public void setUserEmail(String userEmail) {
+	public static void setUserEmail(String userEmail) {
 		User.userEmail = userEmail;
 	}
 	

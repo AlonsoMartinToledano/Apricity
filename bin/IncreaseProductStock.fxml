@@ -90,13 +90,13 @@
                   <Insets top="30.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="productText" onAction="#writeProductText" GridPane.rowIndex="1" />
+            <TextField fx:id="productText" GridPane.rowIndex="1" />
             <Label text="How many units do you want to increase?" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="20.0" top="30.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="unitsText" onAction="#writeUnitsText" GridPane.rowIndex="3" />
+            <TextField fx:id="unitsText" GridPane.rowIndex="3" />
             <Button fx:id="increaseButton" mnemonicParsing="false" onAction="#pushIncreaseButton" text="Increase" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="120.0" />

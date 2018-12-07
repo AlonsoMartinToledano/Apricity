@@ -1,5 +1,6 @@
 package Controller;
 
+import Class.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -24,16 +25,20 @@ public class SearchAProductController {
     void pushBackButton(ActionEvent event) {
     	General.searchAProduct.close();
     	General.normalUserMenu.show();
+    	searchText.clear();
+    	productText.clear();
     }
 
     @FXML
     void pushSearchButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void writeSearchText(ActionEvent event) {
-
+    	if (Product.productExist(searchText.getText())) {
+    		productText.setText(Product.visualizeAProduct(searchText.getText()));
+    		searchText.clear();
+    	}
+    	else {
+    		searchText.clear();
+    		productText.setText("The product does not exist in our database");
+    	}
     }
 
 }
