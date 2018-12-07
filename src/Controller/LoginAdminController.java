@@ -24,7 +24,8 @@ public class LoginAdminController {
 
     @FXML
     void pushLoginButton(ActionEvent event) {
-
+    	General.loginAdmin.close();
+    	General.adminMenu.show();
     }
 
     @FXML

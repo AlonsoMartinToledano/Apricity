@@ -19,6 +19,10 @@ public class General extends Application {
 	static Stage searchAProduct;
 	static Stage changeUserPassword;
 	static Stage changeUserEmail;
+	static Stage adminMenu;
+	static Stage increaseProductStock;
+	static Stage changeAdminPassword;
+	static Stage changeUserName;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -93,6 +97,34 @@ public class General extends Application {
 			Scene tenthScene = new Scene(rootTenth);
 			changeUserEmail.setTitle("Apricity");
 			changeUserEmail.setScene(tenthScene);
+			
+			adminMenu = new Stage();
+			URL eleventh = getClass().getClassLoader().getResource("AdminMenu.fxml");
+			Parent rootEleventh = FXMLLoader.load(eleventh);
+			Scene eleventhScene = new Scene(rootEleventh);
+			adminMenu.setTitle("Apricity");
+			adminMenu.setScene(eleventhScene);
+			
+			increaseProductStock = new Stage();
+			URL twelfth = getClass().getClassLoader().getResource("IncreaseProductStock.fxml");
+			Parent rootTwelfth = FXMLLoader.load(twelfth);
+			Scene twelfthScene = new Scene(rootTwelfth);
+			increaseProductStock.setTitle("Apricity");
+			increaseProductStock.setScene(twelfthScene);
+			
+			changeAdminPassword = new Stage();
+			URL thirteenth = getClass().getClassLoader().getResource("ChangeAdminPassword.fxml");
+			Parent rootThirteenth = FXMLLoader.load(thirteenth);
+			Scene thirteenthScene = new Scene(rootThirteenth);
+			changeAdminPassword.setTitle("Apricity");
+			changeAdminPassword.setScene(thirteenthScene);
+			
+			changeUserName = new Stage();
+			URL fourteenth = getClass().getClassLoader().getResource("ChangeUserName.fxml");
+			Parent rootFourteenth = FXMLLoader.load(fourteenth);
+			Scene fourteenthScene = new Scene(rootFourteenth);
+			changeUserName.setTitle("Apricity");
+			changeUserName.setScene(fourteenthScene);
 			
 		}catch(Exception e) {
 			e.printStackTrace();
