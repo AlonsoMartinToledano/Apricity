@@ -19,10 +19,23 @@
          <bottom>
             <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
          </bottom>
-         <center>
+         <top>
             <Label text="Account Information" textFill="#0a23c6" BorderPane.alignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="24.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <Label text="(Press any key to reveal)" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <font>
+                  <Font size="13.0" />
                </font>
             </Label>
          </center>
@@ -59,7 +72,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextArea fx:id="userNameText" editable="false" layoutX="67.0" layoutY="55.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="200.0" />
+            <TextArea fx:id="userNameText" editable="false" layoutX="67.0" layoutY="55.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#viewUserNameText" prefHeight="31.0" prefWidth="200.0" />
             <Label layoutX="44.0" layoutY="105.0" text="Password:">
                <font>
                   <Font size="24.0" />
@@ -70,8 +83,8 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextArea fx:id="passwordText" editable="false" layoutX="67.0" layoutY="146.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="200.0" />
-            <TextArea fx:id="emailText" editable="false" layoutX="67.0" layoutY="231.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="200.0" />
+            <TextArea fx:id="passwordText" editable="false" layoutX="67.0" layoutY="146.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#viewUserNameText" prefHeight="31.0" prefWidth="200.0" />
+            <TextArea fx:id="emailText" editable="false" layoutX="67.0" layoutY="231.0" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#viewUserNameText" prefHeight="31.0" prefWidth="200.0" />
          </children>
       </Pane>
    </center>
@@ -86,7 +99,7 @@
          </rowConstraints>
          <children>
             <Separator prefHeight="13.0" prefWidth="600.0" />
-            <Button fx:id="backButton" mnemonicParsing="false" onAction="#pushBackButton" text="Back" GridPane.rowIndex="1">
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#pushBackButton" onKeyPressed="#viewUserNameText" text="Back" GridPane.rowIndex="1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

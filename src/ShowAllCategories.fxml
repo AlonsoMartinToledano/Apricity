@@ -18,10 +18,17 @@
          <bottom>
             <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
          </bottom>
-         <center>
+         <top>
             <Label text="All Categories" textFill="#0a23c6" BorderPane.alignment="CENTER">
                <font>
                   <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <Label text="(Press any key to reveal)" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="13.0" />
                </font>
             </Label>
          </center>
@@ -61,7 +68,7 @@
          </rowConstraints>
          <children>
             <Separator prefHeight="13.0" prefWidth="600.0" />
-            <Button fx:id="backButton" mnemonicParsing="false" onAction="#pushBackButton" text="Back" GridPane.rowIndex="1">
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#pushBackButton" onKeyPressed="#viewAllCategoriesText" text="Back" GridPane.rowIndex="1">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -73,6 +80,9 @@
       </GridPane>
    </bottom>
    <center>
-      <TextArea fx:id="allCategoriesText" editable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <TextArea fx:id="allCategoriesText" editable="false" onKeyPressed="#viewAllCategoriesText" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></TextArea>
    </center>
 </BorderPane>

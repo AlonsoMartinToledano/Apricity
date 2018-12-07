@@ -1,9 +1,11 @@
 package Controller;
 
+import Class.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyEvent;
 
 public class ShowAccountInformationController {
 
@@ -23,6 +25,16 @@ public class ShowAccountInformationController {
     void pushBackButton(ActionEvent event) {
     	General.showAccountInformation.close();
     	General.normalUserMenu.show();
+    	userNameText.clear();
+    	passwordText.clear();
+    	emailText.clear();
     }
-
+    
+    @FXML
+    void viewUserNameText(KeyEvent event) {
+    	userNameText.setText(User.getUserName());
+    	passwordText.setText(User.getUserPassword());
+    	emailText.setText(User.getUserEmail());
+    }
+    
 }

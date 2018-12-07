@@ -6,41 +6,41 @@ import java.util.List;
 public class User {
 	private static List <User> userList = new ArrayList <User>();
 	
-	private String userName;
-	private String userPassword;
-	private String userEmail;
+	private static String userName;
+	private static String userPassword;
+	private static String userEmail;
 	
 	//User Constructor				
 	public User(String userName, String userPassword, String userEmail){
-		this.userName = userName;
-		this.userPassword = userPassword;
-		this.userEmail = userEmail;
+		User.userName = userName;
+		User.userPassword = userPassword;
+		User.userEmail = userEmail;
 		
 		userList.add(this);
 	}
 	
 	//userName Getter and Setter
-	public String getUserName() {
+	public static String getUserName() {
 		return userName;
 	}
 	public void setUserName(String userName) {
-		this.userName = userName;
+		User.userName = userName;
 	}
 	
 	//userPassword Getter and Setter
-	public String getUserPassword() {
+	public static String getUserPassword() {
 		return userPassword;
 	}
 	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
+		User.userPassword = userPassword;
 	}
 	
 	//userEmail Getter and Setter
-	public String getUserEmail() {
+	public static String getUserEmail() {
 		return userEmail;
 	}
 	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+		User.userEmail = userEmail;
 	}
 	
 	//Be Top Buyer
@@ -57,7 +57,7 @@ public class User {
 	}
 	
 	//Login NormalUser
-	public boolean loginNormalUser(String name, String pass) {
+	public static boolean loginNormalUser(String name, String pass) {
 		boolean login;
 		
 		if(name.equals(userName) && pass.equals(userPassword)) {

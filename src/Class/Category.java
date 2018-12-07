@@ -38,6 +38,18 @@ public abstract class Category {
 		}
 	}
 	
+	//Visualize Categories
+	public static String visualizeCategories() {
+		String text1;
+		String text2 = "";
+		
+		for (int i = 0; i < categoryList.size(); i++) {
+			text1 = i + 1 + ". " + (categoryList.get(i)).getCategoryName() + "\n";
+			text2 = text2 + text1;
+		}
+		return text2;
+	}
+	
 	//Write Categories File
 	public static void writeCategoriesFile() {
 		String category;

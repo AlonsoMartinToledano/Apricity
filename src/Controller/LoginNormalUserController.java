@@ -1,5 +1,6 @@
 package Controller;
 
+import Class.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -24,21 +25,25 @@ public class LoginNormalUserController {
     void pushBackButton(ActionEvent event) {
     	General.loginNormalUser.close();
     	General.start.show();
+    	userNameText.clear();
+		passwordText.clear();
     }
 
     @FXML
     void pushLoginButton(ActionEvent event) {
-    	General.loginNormalUser.close();
-    	General.normalUserMenu.show();
+    	String name = userNameText.getText();
+    	String pass = passwordText.getText();
+    	
+    	if (User.loginNormalUser(name, pass)) {
+    		General.loginNormalUser.close();
+        	General.normalUserMenu.show();
+        	userNameText.clear();
+        	passwordText.clear();
+    	}
+    	else {
+    		userNameText.clear();
+    		passwordText.clear();
+    	}
     }
 
-    @FXML
-    void writePassword(ActionEvent event) {
-    	
-    }
-
-    @FXML
-    void writeUserName(ActionEvent event) {
-    	
-    }
 }

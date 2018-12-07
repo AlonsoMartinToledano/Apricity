@@ -1,9 +1,11 @@
 package Controller;
 
+import Class.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.KeyEvent;
 
 public class ShowAllProductsController {
 
@@ -17,6 +19,12 @@ public class ShowAllProductsController {
     void pushBackButton(ActionEvent event) {
     	General.showAllProducts.close();
     	General.normalUserMenu.show();
+    	allProductsText.clear();
+    }
+    
+    @FXML
+    void viewAllProductsText(KeyEvent event) {
+    	allProductsText.setText(Product.visualizeProducts());
     }
 
 }

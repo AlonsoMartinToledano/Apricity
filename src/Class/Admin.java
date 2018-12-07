@@ -1,7 +1,7 @@
 package Class;
 
 public class Admin {
-	private String adminPassword = "adminpassword";
+	private static String adminPassword = "admin";
 	
 	//adminPassword Getter and Setter
 	public String getAdminPassword() {
@@ -9,11 +9,11 @@ public class Admin {
 	}
 
 	public void setAdminPassword(String adminPassword) {
-		this.adminPassword = adminPassword;
+		Admin.adminPassword = adminPassword;
 	}
 	
 	//LoginAdmin
-	public boolean loginAdmin(String pass) {
+	public static boolean loginAdmin(String pass) {
 		boolean login;
 		
 		if(pass.equals(adminPassword)) {

@@ -88,7 +88,7 @@
                   <Insets bottom="50.0" left="125.0" />
                </GridPane.margin>
             </Label>
-            <PasswordField fx:id="passwordText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#writePasswordText" prefHeight="31.0" prefWidth="271.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <PasswordField fx:id="passwordText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="271.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="40.0" top="35.0" />
                </GridPane.margin>

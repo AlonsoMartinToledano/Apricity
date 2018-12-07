@@ -16,7 +16,7 @@ public class Main {
 		
 		//Create a User and Admin
 		Admin admin = new Admin();
-		User user = new User("a", "a", "a");
+		User user = new User("user", "password", "user@gmail.com");
 
 		//Create Products
 		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);

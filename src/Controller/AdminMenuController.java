@@ -1,5 +1,7 @@
 package Controller;
 
+import Class.Category;
+import Class.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,7 +35,7 @@ public class AdminMenuController {
 
     @FXML
     void pushCategoryListFileButton(ActionEvent event) {
-
+    	Category.writeCategoriesFile();
     }
 
     @FXML
@@ -56,7 +58,7 @@ public class AdminMenuController {
 
     @FXML
     void pushProductListFileButton(ActionEvent event) {
-
+    	Product.writeProductsFile();
     }
 
 }

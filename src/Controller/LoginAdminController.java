@@ -1,5 +1,6 @@
 package Controller;
 
+import Class.Admin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -20,17 +21,21 @@ public class LoginAdminController {
     void pushBackButton(ActionEvent event) {
     	General.loginAdmin.close();
     	General.start.show();
+    	passwordText.clear();
     }
 
     @FXML
     void pushLoginButton(ActionEvent event) {
-    	General.loginAdmin.close();
-    	General.adminMenu.show();
-    }
-
-    @FXML
-    void writePasswordText(ActionEvent event) {
-
+    	String pass = passwordText.getText();
+    	
+    	if (Admin.loginAdmin(pass)) {
+    		General.loginAdmin.close();
+        	General.adminMenu.show();
+        	passwordText.clear();
+    	}
+    	else {
+    		passwordText.clear();
+    	}
     }
 
 }
