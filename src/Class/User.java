@@ -72,7 +72,7 @@ public class User {
 		//Inner Class TopBuyers
 		public static class TopBuyers { //Singleton Class
 			private static TopBuyers TOP_BUYER;
-			private User topBuyer;
+			private static User topBuyer;
 			private TopBuyers() {
 			}
 			
@@ -84,11 +84,11 @@ public class User {
 			}
 			
 			//topBuyer Getter and Setter
-			public void setTopBuyer(User topBuyer) {
-				this.topBuyer = topBuyer;
+			public static void setTopBuyer(User topBuyer) {
+				topBuyer = topBuyer;
 			}
 			
-			public User getTopBuyer() {
+			public static User getTopBuyer() {
 				return topBuyer;
 			}
 		}

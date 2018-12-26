@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import Class.User;
 
 class UserTest {
+	
+	User user = new User("a", "a", "a");
 
 	//user Constructor Test
 		@Test
@@ -17,15 +19,11 @@ class UserTest {
 	//userName Getter and Setter Test
 		@Test
 		void testGetUserName() {
-			User user = new User("a", "a", "a");
-			
 			assertEquals("a", user.getUserName());
 		}
 		
 		@Test
 		void testSetUserName() {
-			User user = new User("a", "a", "a");
-			
 			user.setUserName("newUserName");
 			assertEquals("newUserName", user.getUserName());
 		}
@@ -33,15 +31,11 @@ class UserTest {
 	//userPassword Getter and Setter Test
 		@Test
 		void testGetUserPassword() {
-			User user = new User("a", "a", "a");
-			
 			assertEquals("a", user.getUserPassword());
 		}
 		
 		@Test
 		void testSetUserPassword() {
-			User user = new User("a", "a", "a");
-			
 			user.setUserPassword("newPassword");
 			assertEquals("newPassword", user.getUserPassword());
 		}
@@ -49,15 +43,11 @@ class UserTest {
 	//userEmail Getter and Setter Test
 		@Test
 		void testGetUserEmail() {
-			User user = new User("a", "a", "a");
-			
 			assertEquals("a", user.getUserEmail());
 		}
 		
 		@Test
 		void testSetUserEmail() {
-			User user = new User("a", "a", "a");
-			
 			user.setUserEmail("newEmail@gmail.com");
 			assertEquals("newEmail@gmail.com", user.getUserEmail());
 		}
@@ -65,9 +55,12 @@ class UserTest {
 	//LoginNormalUser Test
 		@Test
 		void testLoginNormalUser() {
-			String name = "a";
-			String pass = "a";
-			User user = new User(name, pass, "a");
-			assertEquals(true, user.loginNormalUser(name, pass));
+			String name = "newUserName";
+			String pass = "newPassword";
+			assertFalse(user.loginNormalUser(name, pass));
+			
+			name = "a";
+			pass = "a";
+			assertTrue(user.loginNormalUser(name, pass));
 		}
 }
