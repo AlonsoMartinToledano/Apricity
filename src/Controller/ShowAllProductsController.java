@@ -1,6 +1,6 @@
 package Controller;
 
-import Class.Product;
+import Class.Category;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -24,7 +24,7 @@ public class ShowAllProductsController {
     
     @FXML
     void viewAllProductsText(KeyEvent event) {
-    	allProductsText.setText(Product.visualizeProducts());
+    	allProductsText.setText(Category.Product.visualizeProducts());
     }
 
 }

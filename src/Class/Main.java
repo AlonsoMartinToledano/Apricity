@@ -19,13 +19,13 @@ public class Main {
 		User user = new User("user", "password", "user@gmail.com");
 
 		//Create Products
-		Product pr1 = new Product("Clothing", "Shirt", 9.99, 100);
-		Product pr2 = new Product("Video", "Camera", 350, 50);
-		Product pr3 = new Product("Videogames", "Mario Kart", 34.95, 25);
+		Category.Product pr1 = new Category.Product("Clothing", "Shirt", 9.99, 100);
+		Category.Product pr2 = new Category.Product("Video", "Camera", 350, 50);
+		Category.Product pr3 = new Category.Product("Videogames", "Mario Kart", 34.95, 25);
 		
-		General.Inicio();
+		//General.Inicio();
 		
-		/*
+		
 		
 		//Main Program		
 		System.out.println("Welcome to Apricity.\nOne of the best online shopping sites arround the world.\n");
@@ -150,12 +150,12 @@ public class Main {
 							
 						//Show All Products
 						case 4:
-							Product.showProductName();
+							Category.Product.showProductName();
 							break;
 							
 						//Search a Product
 						case 5:
-							Product.searchAProduct();
+							Category.Product.searchAProduct();
 							break;
 							
 						//Exit
@@ -228,7 +228,7 @@ public class Main {
 									
 								//Increase Product Stock
 								case 3:
-									Product.increaseProductStock();
+									Category.Product.increaseProductStock();
 									break;
 									
 								//Generate a Category List File
@@ -238,7 +238,7 @@ public class Main {
 									
 								//Generate a Product List File
 								case 5:
-									Product.writeProductsFile();
+									Category.Product.writeProductsFile();
 									break;
 									
 								//Exit
@@ -266,7 +266,7 @@ public class Main {
 			}
 		}while(option != 1 && option != 2 && option != 3);
 		
-		*/
+		
 		
 	}
 }

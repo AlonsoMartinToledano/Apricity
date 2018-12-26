@@ -1,6 +1,6 @@
 package Controller;
 
-import Class.Product;
+import Class.Category;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -31,8 +31,8 @@ public class SearchAProductController {
 
     @FXML
     void pushSearchButton(ActionEvent event) {
-    	if (Product.productExist(searchText.getText())) {
-    		productText.setText(Product.visualizeAProduct(searchText.getText()));
+    	if (Category.Product.productExist(searchText.getText())) {
+    		productText.setText(Category.Product.visualizeAProduct(searchText.getText()));
     		searchText.clear();
     	}
     	else {

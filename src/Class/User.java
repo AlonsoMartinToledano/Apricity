@@ -45,7 +45,7 @@ public class User {
 	
 	//Be Top Buyer
 	public void beTopBuyer() {
-		TopBuyers tB = TopBuyers.getTopBuyers();
+		User.TopBuyers tB = User.TopBuyers.getTopBuyers();
 		if(tB.getTopBuyer() != null && tB.getTopBuyer() != this) {
 			System.out.println("Transfering the Top Buyer Title");
 		}
@@ -53,7 +53,7 @@ public class User {
 	}
 	
 	public boolean checkTopBuyer() {
-		return (TopBuyers.getTopBuyers().getTopBuyer() == this);
+		return (User.TopBuyers.getTopBuyers().getTopBuyer() == this);
 	}
 	
 	//Login NormalUser
@@ -68,4 +68,28 @@ public class User {
 		}
 		return login;
 	}
+		
+		//Inner Class TopBuyers
+		public static class TopBuyers { //Singleton Class
+			private static TopBuyers TOP_BUYER;
+			private User topBuyer;
+			private TopBuyers() {
+			}
+			
+			public static TopBuyers getTopBuyers() {
+				if (TOP_BUYER == null) {
+					TOP_BUYER = new TopBuyers();
+				}
+				return TOP_BUYER;
+			}
+			
+			//topBuyer Getter and Setter
+			public void setTopBuyer(User topBuyer) {
+				this.topBuyer = topBuyer;
+			}
+			
+			public User getTopBuyer() {
+				return topBuyer;
+			}
+		}
 }

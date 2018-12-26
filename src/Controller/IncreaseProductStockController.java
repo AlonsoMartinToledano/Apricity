@@ -1,6 +1,6 @@
 package Controller;
 
-import Class.Product;
+import Class.Category;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -30,7 +30,7 @@ public class IncreaseProductStockController {
 
     @FXML
     void pushIncreaseButton(ActionEvent event) {
-    	Product.increaseProductStockVisual(productText.getText(), Integer.parseInt(unitsText.getText()));
+    	Category.Product.increaseProductStockVisual(productText.getText(), Integer.parseInt(unitsText.getText()));
     	productText.clear();
     	unitsText.clear();
     }
