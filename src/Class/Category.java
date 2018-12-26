@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.io.FileOutputStream;
+import java.security.SecureRandom;
 
 public abstract class Category {
 	private static List <Category> categoryList = new ArrayList <Category>();
@@ -262,6 +263,28 @@ public abstract class Category {
 					}
 				}
 				System.out.println("\nProduct List File generated successfully!");
+			}
+			
+			//Inner Class BuyTime (Threads)
+			public static class BuyTime implements Runnable {
+				private static SecureRandom randomTime = new SecureRandom();
+				private int sleepTime;
+				
+				public BuyTime () {
+					sleepTime = randomTime.nextInt(5000);
+				}
+				
+				@Override
+				public void run() {
+					try {
+						System.out.println("You can buy again in " + sleepTime + "seconds");
+						Thread.sleep(sleepTime);
+					}catch(InterruptedException exception) {
+						exception.printStackTrace();
+						Thread.currentThread().interrupt();
+					}
+					System.out.println("Now you can buy again");
+				}
 			}
 		}
 }
