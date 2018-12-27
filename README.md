@@ -47,4 +47,5 @@ In the picture we can see that the Controller Class still in 0.0%, main classes 
 Finally, I dis some new tests after complete the final project.
 As we can see, the general percentage of covering by testing increase to 25.6% (13,8% more than the last picture, and 3.4% more than at the beggining of the project).
 Controller Class still in 0.0% of testing, main classes increase to 20.8% (15.3% more than the last picture, and 3.8% more than the beggining of the project), and testing accuracy increase to 99.4% (5.4% more than the last picture, and 3.6% more than at the beggining of the project).
+
 ![alt text](https://github.com/AlonsoMartinToledano/Apricity/blob/master/pictures/3.PNG)
