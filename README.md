@@ -29,6 +29,24 @@ Finally, the thread continues working, and console shows a message to the user t
 		}
 	}
 ## Inner Classes
+A inner class is a class inside other. That simplify code, making it more clear and intuitive. I change some classes that I already have to inner classes because there are correlated.
+I put Product Class inside Category Class, because at the time that you register a product, you assign this product to a category, then, it is logic to be inside of Category Class.
+I also move the class TopBuyers to User, because in the website only con buy users so, it is logically an user will be a top buyer. According to this, I put TopBuyers Class inside User.
+Finally, the class recently created based on threads, BuyTime, I include it inside Product Class. By this way, we have a Class called Category, that includes Product Class, that includes BuyTime class.
 
-
+Doing this, we can see the main classes firstly, finding the secondary ones inside each one, making the code intuitive.
 ## Testing
+Before doing this final project I took a picture of percentage of testing coverage.
+In the picture we can see that the project has a 22.4% of coverage. More concretely, a 0.0% of Controller testing, 17.6% of main classes, and 95.8% of correct tests.
+*PHOTO*
+
+
+After making some changes the general percentage decrease to 11.8%.
+In the picture we can see that the Controller Class still in 0.0%, main classes has 5.5% (It decrease 12.1%), and testing accuracy decrease to 94.0% (A 1.8% from last picture).
+*PHOTO*
+
+
+Finally, I dis some new tests after complete the final project.
+As we can see, the general percentage of covering by testing increase to 25.6% (13,8% more than the last picture, and 3.4% more than at the beggining of the project).
+Controller Class still in 0.0% of testing, main classes increase to 20.8% (15.3% more than the last picture, and 3.8% more than the beggining of the project), and testing accuracy increase to 99.4% (5.4% more than the last picture, and 3.6% more than at the beggining of the project).
+*PHOTO*
